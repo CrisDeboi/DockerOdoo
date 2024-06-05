@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="responsivecars.list">
+      <field name="name">responsivecars list</field>
+      <field name="model">responsivecars.responsivecars</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="responsivecars.action_window">
+      <field name="name">responsivecars window</field>
+      <field name="res_model">responsivecars.responsivecars</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="responsivecars.action_server">
+      <field name="name">responsivecars server</field>
+      <field name="model_id" ref="model_responsivecars_responsivecars"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="responsivecars" id="responsivecars.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="responsivecars.menu_1" parent="responsivecars.menu_root"/>
+    <menuitem name="Menu 2" id="responsivecars.menu_2" parent="responsivecars.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="responsivecars.menu_1_list" parent="responsivecars.menu_1"
+              action="responsivecars.action_window"/>
+    <menuitem name="Server to list" id="responsivecars" parent="responsivecars.menu_2"
+              action="responsivecars.action_server"/>
+-->
+  </data>
+</odoo>

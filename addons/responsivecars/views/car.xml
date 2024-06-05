@@ -1,0 +1,35 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <record model="ir.ui.view" id="responsivecars.car_list">
+      <field name="name">Cars list</field>
+      <field name="model">responsivecars.car</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="brand"/>
+          <field name="model"/>
+          <field name="registration_date"/>
+          <field name="motor"/>
+          <field name="price"/>
+          <field name="client_id"/>          
+        </tree>
+      </field>
+    </record>
+
+    <!-- actions opening views on models -->
+    <record model="ir.actions.act_window" id="responsivecars.car_action_window">
+      <field name="name">Cars window</field>
+      <field name="res_model">responsivecars.car</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Top menu item -->
+    <menuitem name="ResponsiveCars" id="responsivecars.menu_root"/>
+
+    <!-- menu categories -->
+    <menuitem name="Cars" id="responsivecars.menu_1" parent="responsivecars.menu_root"/>
+
+    <!-- actions -->
+    <menuitem name="Cars List" id="responsivecars.menu_1_list" parent="responsivecars.menu_1" action="responsivecars.car_action_window"/>
+  </data>
+</odoo>
